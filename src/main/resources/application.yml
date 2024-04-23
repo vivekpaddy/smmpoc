@@ -1,5 +1,5 @@
 server:
-  port: 8090
+  port: 8084
 spring:
   application:
     name: smmpoc
@@ -7,6 +7,5 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          issuer-uri: http://localhost:8082/auth/realms/smm-poc-approach
-          jwk-set-uri: http://localhost:8083/auth/realms/smm-poc-approach/protocol/openid-connect/certs
+          issuer-uri: http://localhost:8082/realms/smm-poc-approach
 
