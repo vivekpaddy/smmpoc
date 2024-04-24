@@ -1,5 +1,16 @@
 server:
-  port: 8084
+  port: 8443
+  ssl:
+    key-store-type: PKCS12
+    key-store: classpath:keystores/smmpoc.p12
+    key-store-password: password
+    key-alias: smmpoc
+    enabled: true
+logging:
+  level:
+    org:
+      springframework:
+        security: DEBUG
 spring:
   application:
     name: smmpoc
@@ -7,5 +18,5 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          issuer-uri: http://localhost:8082/realms/smm-poc-approach
+          issuer-uri: https://localhost/realms/smm-poc-approach
 
